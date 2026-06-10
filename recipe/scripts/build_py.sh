@@ -12,7 +12,6 @@ export CMAKE_GENERATOR=Ninja
 
 # CMake extra configuration:
 extra_cmake_args=(
-    -G Ninja
     -D CMAKE_C_COMPILER="${CC}"
     -D CMAKE_CXX_COMPILER="${CXX}"
     -D AL_DEVELOPMENT_LAYOUT=OFF
@@ -28,7 +27,7 @@ extra_cmake_args=(
 )
 
 # Set CMAKE_ARGS environment variable for the build
-export CMAKE_ARGS=${CMAKE_ARGS} "${extra_cmake_args[@]}"
+export CMAKE_ARGS="${CMAKE_ARGS} ${extra_cmake_args[@]}"
 
 # Build and install the package
 ${PYTHON} -m pip install . --no-deps --no-build-isolation -vv

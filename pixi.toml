@@ -5,7 +5,7 @@
 
 [workspace]
 name = "imas-core-feedstock"
-version = "3.62.0"  # conda-smithy version used to generate this file
+version = "2026.5.29"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/imas-core-feedstock"
 authors = ["@conda-forge/imas-core"]
 channels = ["conda-forge"]

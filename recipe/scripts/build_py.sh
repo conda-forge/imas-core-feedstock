@@ -21,16 +21,14 @@ extra_cmake_args=(
     # Only build the core library, not the Python bindings
     -D AL_USE_INSTALLED_CORE=ON
     -D AL_PYTHON_BINDINGS=ON
-    -D Python_EXECUTABLE="${PYTHON}"
-    -D Python3_EXECUTABLE="${PYTHON}"
     # Backends
     -D AL_BACKEND_HDF5=OFF
     -D AL_BACKEND_UDA=OFF
     -D AL_BACKEND_MDSPLUS=OFF
 )
 
-cmake ${CMAKE_ARGS} "${extra_cmake_args[@]}" \
-    -B build -S "${SRC_DIR}"
+# Set CMAKE_ARGS environment variable for the build
+export CMAKE_ARGS=${CMAKE_ARGS} "${extra_cmake_args[@]}"
 
-# Build and install
-cmake --build build --target install
+# Build and install the package
+${PYTHON} -m pip install . --no-deps --no-build-isolation -vv

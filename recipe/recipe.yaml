@@ -14,7 +14,7 @@ source:
       - patches/hdf5-global-target-fallback.patch
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   # Core library

@@ -141,4 +141,5 @@ about:
 extra:
   feedstock-name: imas-core
   recipe-maintainers:
+    - SimonPinches
     - munechika-koyo

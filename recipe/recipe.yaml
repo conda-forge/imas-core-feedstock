@@ -1,5 +1,5 @@
 context:
-  version: "5.7.1"
+  version: "5.7.2"
 
 recipe:
   name: imas-core
@@ -7,7 +7,7 @@ recipe:
 
 source:
   - url: https://github.com/iterorganization/IMAS-Core/archive/refs/tags/${{ version }}.tar.gz
-    sha256: eec5fdd4b9db219f05d54025776a3ce57a32c65cced463ab499de1c04a6f02d9
+    sha256: 4a80ae321a7dba5c6b91cfaf9234fe47a1946d9e6d7f9f7a3e996614f39e68c6
     patches:
       - patches/change-python-init.patch
       - patches/hdf5-global-target-fallback.patch

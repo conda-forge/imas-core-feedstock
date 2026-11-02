@@ -11,9 +11,10 @@ source:
     patches:
       - patches/change-python-init.patch
       - patches/hdf5-global-target-fallback.patch
+      - patches/use-standard-cxx-mutex.patch
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   # Core library
@@ -49,12 +50,7 @@ outputs:
         #     - mdsplus
         - if: win
           then:
-            - pthreads-win32
             - dlfcn-win32
-      run:
-        - if: win
-          then:
-            - pthreads-win32
       run_exports:
         - ${{ pin_subpackage("libimas-core", upper_bound="x.x.x") }}
     tests:

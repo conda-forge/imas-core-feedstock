@@ -36,7 +36,7 @@ outputs:
         - git
         - cmake
         - ninja
-        - pkg-config
+        - pkgconf
       host:
         - libxml2-devel >=2.15
         - zlib
@@ -73,7 +73,7 @@ outputs:
         - git
         - cmake
         - ninja
-        - pkg-config
+        - pkgconf
         - if: build_platform != target_platform
           then:
             - python

@@ -10,7 +10,7 @@ source:
     sha256: bf0580ab9084983a142a2f3f996acb1d7b69965f1f5b15b2e15de99cdc4c59b0
     patches:
       - patches/change-python-init.patch
-      - patches/hdf5-global-target-fallback.patchG
+      - patches/hdf5-global-target-fallback.patch
 
 build:
   number: 1

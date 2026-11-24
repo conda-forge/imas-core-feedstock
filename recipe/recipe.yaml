@@ -11,10 +11,9 @@ source:
     patches:
       - patches/change-python-init.patch
       - patches/hdf5-global-target-fallback.patch
-      - patches/use-standard-cxx-mutex.patch
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   # Core library
@@ -37,7 +36,7 @@ outputs:
         - git
         - cmake
         - ninja
-        - pkg-config
+        - pkgconf
       host:
         - libxml2-devel >=2.15
         - zlib
@@ -74,7 +73,7 @@ outputs:
         - git
         - cmake
         - ninja
-        - pkg-config
+        - pkgconf
         - if: build_platform != target_platform
           then:
             - python
